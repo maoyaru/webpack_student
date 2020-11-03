@@ -1,0 +1,459 @@
+.main-warpper {
+  overflow: hidden;
+  height: auto;
+}
+
+.l-header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1100;
+}
+
+.content {
+  margin-top: 140px;
+  min-height: 100%;
+}
+// avatar.vue
+.user-warpper {
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  font-size: 0;
+  cursor: pointer;
+  position: relative;
+  /*z-index: 9999;*/
+
+  .userinfo {
+    display: inline-block;
+    height: 30px;
+
+    .name {
+      vertical-align: top;
+      font-size: 14px;
+      margin-left: 10px;
+    }
+  }
+}
+
+// leftmenu.vue
+.el-menu {
+  text-align: left;
+  background: none;
+  border: none;
+
+  .el-submenu__title, .el-menu-item {
+    height: 60px;
+    line-height: 60px;
+
+    &.is-active {
+      background: rgba(244, 244, 244, 1);
+
+      .icon-home {
+        bg-image('~@/assets/theme-default/images/index/icon-home-yes');
+      }
+
+      .icon-group {
+        bg-image('~@/assets/theme-default/images/index/icon-group-yes');
+      }
+
+      .icon-schedule {
+        bg-image('~@/assets/theme-default/images/index/icon-schedule-yes');
+      }
+
+      .icon-booking {
+        bg-image('~@/assets/theme-default/images/index/icon-booking-yes');
+      }
+
+      .icon-history {
+        bg-image('~@/assets/theme-default/images/index/icon-history-yes');
+      }
+
+      .icon-discovery {
+        bg-image('~@/assets/theme-default/images/goodcourse/icon-discovery-yes');
+      }
+    }
+
+    .icon-home {
+      bg-image('~@/assets/theme-default/images/index/icon-home-no');
+    }
+
+    .icon-group {
+      bg-image('~@/assets/theme-default/images/index/icon-group-no');
+    }
+
+    .icon-schedule {
+      bg-image('~@/assets/theme-default/images/index/icon-schedule-no');
+    }
+
+    .icon-booking {
+      bg-image('~@/assets/theme-default/images/index/icon-booking-no');
+    }
+
+    .icon-history {
+      bg-image('~@/assets/theme-default/images/index/icon-history-no');
+    }
+
+    .icon-discovery {
+      bg-image('~@/assets/theme-default/images/goodcourse/icon-discovery-no');
+    }
+  }
+}
+// main.vue
+.main {
+  .left {
+    .students-warpper {
+      position: relative;
+      width: 200px;
+      height: 150px;
+    }
+
+    .left-menu-warpper {
+      margin-top: 10px;
+      width: 200px;
+    }
+
+    .it-test-warpper {
+      width: 200px;
+      margin-top: 40px;
+
+      .icon-ittest {
+        bg-image('~@/assets/theme-default/images/index/icon_shebei_gruy');
+      }
+
+      a {
+        text-decoration: none;
+        color: #303133;
+      }
+    }
+
+    .friend-warpper {
+      width: 200px;
+      margin-top: 10px;
+
+      .icon-friend {
+        width: 48px;
+        height: 48px;
+        margin-top: -5px;
+        bg-image('~@/assets/theme-default/images/index/icon_liwu', 32px, 32px);
+      }
+
+      a {
+        text-decoration: none;
+        color: #303133;
+      }
+    }
+  }
+
+  .right {
+    float: right;
+    width: 950px;
+    position: relative;
+
+    .child-view {
+/*      transition: all 0.3s;
+      width: 100%;*/
+    }
+
+    .slide-left-enter, .slide-right-leave-active {
+      opacity: 0;
+    }
+
+    .slide-left-leave-active, .slide-right-enter {
+      opacity: 0;
+    }
+
+    &:after {
+      clear: both;
+    }
+  }
+}
+// Notice.vue
+.notice-warpper {
+  height: 50px;
+  line-height: 50px;
+  display: flex;
+  font-size: 0;
+  position: relative;
+
+  div {
+    cursor: pointer;
+  }
+
+  .el-avatar {
+    background: none;
+    display: none;
+  }
+
+  .lg-icon {
+    width: 50px;
+    height: 50px;
+
+    &.icon-download {
+      background: url('~@/assets/theme-default/images/index/icon_xiazai.png') no-repeat 0 0 / 100% 100%;
+    }
+
+    &.icon-helper {
+      bg-image('~@/assets/theme-default/images/index/icon_bangzhu');
+    }
+
+    &.icon-notice {
+      bg-image('~@/assets/theme-default/images/index/icon_tongzhi');
+    }
+
+    &:hover {
+      &.icon-download {
+        bg-image('~@/assets/theme-default/images/index/icon_xiazai_bluy');
+      }
+
+      &.icon-helper {
+        bg-image('~@/assets/theme-default/images/index/icon_bangzhu_bluy');
+      }
+
+      &.icon-notice {
+        bg-image('~@/assets/theme-default/images/index/icon_tongzhi_bluy');
+      }
+    }
+  }
+
+  .el-badge {
+    height: 50px;
+  }
+
+  .el-badge__content.is-fixed {
+    box-sizing: border-box;
+    min-width: 14px;
+    text-align: center;
+    height: 14px;
+    line-height: 14px;
+    padding: 0 4px;
+    top: 16px;
+    right: 25px;
+  }
+}
+// students.vue
+.m-students-lists {
+  width: 200px;
+  height: 150px;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  .students {
+    width: 100%;
+    margin-top: 5px;
+    margin-left: 10px;
+    height: 105px;
+    overflow: hidden;
+    position: relative;
+
+    li {
+      float: left;
+      width: 130px;
+      cursor: pointer;
+      margin-bottom: 20px;
+
+      &:last-child:after {
+        clear: left;
+      }
+
+      .name {
+        height: 22px;
+        font-size: 18px;
+        font-weight: 400;
+        color: rgba(52, 54, 77, 1);
+        width: 130px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin-top: 3px;
+      }
+    }
+  }
+
+  .icon-left {
+    position: absolute;
+    width: 10px;
+    height: 20px;
+    right: 20px;
+    top: 50%;
+    transform: rotate(0deg);
+    margin-top: -10px;
+    background-size: 100%;
+    cursor: pointer;
+    bg-image('~@/assets/theme-default/images/index/right');
+    transition: rotate 0.3s;
+
+    &.right {
+      transform: rotate(180deg);
+    }
+  }
+}
+// top.vue
+.areaTime {
+  width: 180px;
+}
+
+.top-warpper {
+  display: flex;
+  height: 50px;
+  line-height: 50px;
+  background: rgba(255, 255, 255, 1);
+  font-size: 0;
+
+  .icon-phone {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: top;
+    margin-top: 13px;
+    background-size: 100%;
+    background: url('~@/assets/theme-default/images/index/phone.png') no-repeat 0 0 / 100% 100%;
+  }
+
+  .left {
+    .phone {
+      font-size: 14px;
+      font-weight: 400;
+      color: rgba(153, 153, 153, 1);
+      padding-left: 10px;
+    }
+  }
+
+  .right {
+    flex: 1;
+
+    .user {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: flex-end;
+      list-style: none;
+      font-size: 14px;
+      margin-right: 10px;
+
+      li {
+        padding: 0 10px;
+
+        .user-warpper, .notice-warpper {
+          vertical-align: middle;
+        }
+      }
+
+      .local {
+        font-size: 16px;
+        font-weight: 500;
+        color: rgba(153, 153, 153, 1);
+        cursor: default;
+        cursor: pointer;
+
+        &.active {
+          color: rgba(86, 190, 205, 1);
+          cursor: default;
+        }
+      }
+    }
+  }
+}
+// topmenu.vue
+.topmenu {
+  height: 70px;
+
+  li {
+    float: left;
+    cursor: pointer;
+  }
+
+  .logo {
+    padding-top: 15px;
+
+    a {
+      display: inline-block;
+      text-decoration: none;
+
+      img {
+        height: 40px;
+        width: 116px;
+      }
+    }
+  }
+
+  .title {
+    margin-left: 136px;
+    width: 200px;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+    font-size: 20px;
+    font-weight: 500;
+
+    &:hover {
+      color: rgba(86, 190, 205, 1);
+      transition: all .25s linear;
+    }
+  }
+
+  .points {
+    /*line-height: 68px;*/
+    padding: 0 67px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+
+    .icon {
+      width: 22px;
+      height: 24px;
+      display: inline-block;
+      background-size: 100%;
+      bg-image('~@/assets/theme-default/images/index/icon_keshi');
+      margin-top: -5px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+
+    .point {
+      font-size: 20px;
+      font-weight: 500;
+      color: rgba(52, 54, 77, 1);
+
+      &:hover {
+        color: rgba(86, 190, 205, 1);
+        transition: all .25s linear;
+      }
+    }
+  }
+
+  .active {
+    background: rgba(244, 244, 244, 1);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: rgba(86, 190, 205, 1);
+
+    .point, .title {
+      color: rgba(86, 190, 205, 1);
+    }
+  }
+}
+// topUpTip.vue
+.top-up-tip {
+  box-sizing: border-box;
+  height: 60px;
+  line-height: 60px;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 8px;
+  border: 1px solid rgba(235, 83, 47, 1);
+  margin: 0 auto;
+  padding: 0 30px;
+
+  .red {
+    color: red;
+  }
+
+  .el-button {
+    float: right;
+    margin-top: 10px;
+  }
+}

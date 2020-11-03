@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <META NAME="ROBOTS" CONTENT="NOINDEX,NOFOLLOW">
+  <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1.0,maximum-scale=1.0, user-scalable=no">
+  <title>LingoAce</title>
+  <link rel="shortcut icon" type="image/x-icon" href="https://cdn.lingo-ace.com/common/favicon.ico">
+  <!-- <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"> -->
+</head>
+
+<body>
+  <div id="demo"></div>
+  <% if(process.env.NODE_ENV === 'production'){ %>
+  <script src="https://cdn.lingo-ace.com/common/vue@2.6.10.js" charset="utf-8"></script>
+  <!-- <script src="https://api.lingoace.com/statics/js/vue@2.6.10.js"></script> -->
+  <% }else{ %>
+  <script src="https://cdn.lingo-ace.com/common/vue@2.6.10.js" charset="utf-8"></script>
+  <!-- <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script> -->
+  <% } %>
+  <script src="https://cdn.lingo-ace.com/common/element-ui@2.12.0.js" charset="utf-8"></script>
+  <!-- <script src="https://api.lingo-ace.com/statics/js/element-ui@2.12.0.js" charset="utf-8"></script> -->
+  <!-- <script src="https://api.lingoace.com/statics/js/element-ui@2.12.0.js"></script> -->
+  <!-- built files will be auto injected -->
+</body>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138582242-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+
+function gtag() { dataLayer.push(arguments); }
+gtag('js', new Date());
+gtag('config', 'UA-138582242-1');
+
+</script> -->
+<!-- <script type="text/javascript" > window.ZohoHCAsap=window.ZohoHCAsap||function(a,b){ZohoHCAsap[a]=b;};(function(){var d=document; var s=d.createElement("script");s.type="text/javascript";s.defer=true; s.src="https://desk.zoho.com/portal/api/web/inapp/509269000000192768?orgId=717312133"; d.getElementsByTagName("head")[0].appendChild(s); })(); </script> -->
+<script>
+(function(i, s, o, g, r, a, m) {
+  i['GoogleAnalyticsObject'] = r;
+  i[r] = i[r] || function() {
+    (i[r].q = i[r].q || []).push(arguments)
+  }, i[r].l = 1 * new Date();
+  a = s.createElement(o),
+    m = s.getElementsByTagName(o)[0];
+  a.async = 1;
+  a.src = g;
+  m.parentNode.insertBefore(a, m);
+})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+ga('create', 'UA-138582242-1', 'auto');
+
+</script>
+<!-- Facebook Pixel Code -->
+<script>
+! function(f, b, e, v, n, t, s) {
+  if (f.fbq) return;
+  n = f.fbq = function() {
+    n.callMethod ?
+      n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+  };
+  if (!f._fbq) f._fbq = n;
+  n.push = n;
+  n.loaded = !0;
+  n.version = '2.0';
+  n.queue = [];
+  t = b.createElement(e);
+  t.async = !0;
+  t.src = v;
+  s = b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t, s)
+}(window, document, 'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '335949320359345');
+fbq('track', 'PageView');
+
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=335949320359345&ev=PageView&noscript=1" /></noscript>
+<!-- End Facebook Pixel Code -->
+
+</html>

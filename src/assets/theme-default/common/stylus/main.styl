@@ -1,0 +1,606 @@
+/*main*/
+#app{
+    width 100%
+    height 100%
+    overflow auto
+    background-image url('~@/assets/theme-default/images/common/lg-bg.jpg')
+    background-repeat no-repeat
+    background-size 100% auto
+    background-position top right
+}
+.copyright{
+    background #4e5066
+    font-size 14px
+    line-height 30px
+    color #77798d
+    text-align center
+    width 100%
+    min-width 1200px
+}
+.index-warpper {
+  width: 100%;
+  min-width: 1200px;
+  min-height: 100%;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  position: relative;
+}
+.tip-warpper {
+    margin-top: 20px;
+}
+
+.main-warpper {
+    // min-width: 1200px;
+    min-height: 100%;
+    width:100%;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding-bottom: 110px;
+}
+.l-header {
+    padding: 0px;
+    min-width:1200px;
+    width: 100%;
+    height: 120px;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
+}
+
+.lg-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.lg-pay {
+    width: 800px;
+    margin: 0 auto;
+}
+/*components*/ 
+.m-booking-teacher {
+  position relative
+  background #fff
+  border-radius 8px
+  margin-bottom 20px
+  padding 24px 30px 30px
+  box-sizing border-box
+  overflow hidden
+  .avatar-warpper {
+    float left
+    width 150px
+    position relative
+    margin-right 20px
+    .national-flag {
+      position absolute
+      bottom 0
+      right 0
+      display block
+      width 48px
+      height 32px
+      background-size 100%
+      bg-image('~@/assets/theme-default/images/booking/icon-flag')
+    }
+  }
+  .c-info-warpper{
+    position relative
+    float left
+    width 716px
+    box-sizing border-box
+    line-height 40px
+    .c-name {
+      max-width 188px
+      overflow hidden
+      white-space nowrap
+      text-overflow ellipsis
+      flex 0 188px
+      font-size 28px
+      font-family Rubik-Regular, Rubik
+      color rgba(52, 54, 77, 1)
+    }
+    .c-year {
+      padding-left 20px
+      max-width 382px
+      font-size 16px
+      font-family RobotoCondensed-Regular, RobotoCondensed
+      color rgba(153, 153, 153, 1)
+    }
+    .c-rate {
+      width 72px
+      height 20px
+      padding-top 11px
+      margin 0 20px
+      overflow hidden
+      .el-rate__icon{
+        margin-right -4px
+      }
+    }
+    .c-des {
+      height 72px
+      min-height 72px
+      overflow hidden
+      font-size 16px
+      font-family Rubik-Regular, Rubik
+      font-weight 400
+      color rgba(153, 153, 153, 1)
+      line-height 24px
+      padding-top 10px
+      position relative
+      transition height .15s ease-in 0s
+    }
+  }
+  .c-more {
+    display block
+    font-size 16px
+    font-family Rubik-Medium, Rubik
+    font-weight 500
+    color #6E70A0
+    line-height 20px
+    position absolute
+    bottom 15px
+    right 30px
+    text-decoration none
+    i {
+      padding-left 2px
+    }
+    .read {
+      width 82px
+      display inline-block
+    }
+  }
+}
+.c-zero-icon,
+.c-success-icon{
+  width 90px
+  height 90px
+  background url('~@/assets/theme-default/images/booking/zero.png') no-repeat 0 0/cover
+  margin 0 auto
+  box-shadow #D6A7FF 0 0 24px
+  border-radius:50%
+}
+.c-success-icon{
+  background url('~@/assets/theme-default/images/booking/icon-success.png') no-repeat 0 0/cover
+}
+/* 头部孩子列表 */
+.m-students-lists {
+  width 200px
+  height 150px
+  text-align center
+  position absolute
+  top 0
+  left 0
+  z-index 1000
+
+  .students {
+    width 100%
+    margin-top 5px
+    margin-left 10px
+    height 105px
+    overflow hidden
+    position relative
+	.c-avatar-plus{
+		img{
+			width 100%
+			height 100%
+		}
+	}
+    li {
+      float left
+      width 130px
+      cursor pointer
+      margin-bottom 20px
+
+      &:last-child:after {
+        clear left
+      }
+
+      .name {
+        height 22px
+        font-size 18px
+        font-weight 400
+        color rgba(52, 54, 77, 1)
+        width 130px
+        overflow hidden
+        text-overflow ellipsis
+        white-space nowrap
+      }
+    }
+  }
+
+  .icon-left {
+    position absolute
+    width 10px
+    height 20px
+    right 20px
+    top 50%
+    transform rotate(0deg)
+    margin-top -10px
+    background-size 100%
+    cursor pointer
+    bg-image('~@/assets/theme-default/images/index/right')
+    transition rotate 0.3s
+
+    &.right {
+      transform rotate(180deg)
+    }
+  }
+}
+/*创建小班课弹窗*/
+.c-group-create {
+  color #34364D
+  padding 0 35px 0
+  .c-group-textarea textarea{
+    height 170px
+    resize none
+  }
+  .course {
+    display flex
+    justify-content space-between
+    margin-bottom 16px
+  }
+  .plan {
+    margin-bottom 8px
+  }
+}
+.no-cupon{
+  padding-top 280px
+  background url('~@/assets/theme-default/images/pay/nocupon.png') no-repeat 50% 50%/240px
+  font-size 16px
+  color #999
+  text-align center
+}
+/*课表日历*/
+.calendar {
+  background #fff
+  width 100%
+  border-radius 8px
+  padding-bottom 20px
+  .title {
+    width 100%
+    display flex
+    padding 10px 10px 0px 10px
+    box-sizing border-box
+    justify-content space-between
+    .last_month, .next_month{
+      display flex
+      justify-content space-between
+      align-items center
+      color rgba(178,178,178,1)
+      cursor pointer
+      .last_month_icon{
+        display inline-block
+        width 10px
+        height 20px
+        bg-image('~@/assets/theme-default/images/schedule/last_month_icon')
+        margin-right 10px
+        box-sizing border-box 
+        background-size 100% 100% 
+      } 
+      .next_month_icon{
+        display inline-block
+        width 10px
+        height 20px
+        bg-image('~@/assets/theme-default/images/schedule/next_month_icon')
+        margin-left 10px
+        box-sizing border-box 
+        background-size 100% 100% 
+      } 
+    } 
+  }
+  .body {
+    width 100%
+    padding 0px 10px 0px 10px
+    margin-top 15px
+    box-sizing border-box
+    font-weight 400
+    color rgba(52,54,77,1)
+    .weekdayName {
+      width 926.5px
+      display flex
+      .week_day {
+        flex 1 
+        height 48px
+        text-align center
+        background rgba(244,244,244,1) 
+        margin-right 1px
+        font-weight 400
+        color rgba(52,54,77,1)
+        line-height 48px 
+      }
+      .redStyle {
+        color rgba(235,83,47,1)
+      }
+    }
+    .oneMonthBox {
+      width 931px
+      position relative
+      .month_day {
+        float left
+        width 130px
+        height 175px
+        border 1px solid rgba(217,217,217,1)
+        color rgba(52,54,77,1)
+        position relative
+        cursor pointer
+        .day-content {
+          width 100%
+          height 100%
+          box-sizing border-box
+          border 2px solid transparent
+          .class_info {
+            padding-left 14px
+          }
+          .dots  {
+            width 8px
+            padding-top 10px
+            position absolute
+            left 4px
+            top 0px
+            bottom 10px
+            box-sizing border-box
+            overflow hidden
+            >div {
+              width 100%
+            }
+            i {
+              display inline-block
+              width 8px
+              height 8px
+              border-radius 8px
+              margin-bottom 4px
+            }
+            i.success {
+              background rgba(215,143,37,1)
+            }
+            i.reserve {
+              background rgba(215,143,37,0.4)
+            }
+          }
+          >span {
+            display inline-block
+            padding 10px 0 0 20px
+          }  
+          .reserve {
+            width 64px
+            height 24px
+            bg-image('~@/assets/theme-default/images/common/reserve')
+            background-size 100% 100%
+            right 0
+            top 12px
+          }
+          .label {
+            margin-top 10px
+            font-size 12px
+            .trial, .group {
+              display inline-block
+              padding 1px 6px
+              border-radius 8px
+              background #F3F3F3
+              font-weight 500 
+              color #999  
+              // transform scale(0.8)
+              font-size: 0.8em  
+              margin-bottom 4px  
+            }
+          }
+          .class_time, .level, .teacher {
+            color rgba(52,54,77,1) 
+            line-height 19px 
+            margin 0
+            max-width 113px            
+          }
+        }
+      }
+    }
+  }
+}
+.table-shadow {
+  box-shadow:-8px 8px 4px rgba(182,182,182,0.08)
+}
+.m-schedule-poper{
+  max-height 430px
+  overflow auto
+  margin -12px
+  .arrow {
+    width 0px
+    height 0px
+    border 4px solid transparent
+    border-right-color white
+    position absolute
+    left -8px
+    top 50%
+    transform translateY(-50%)
+  }
+  .all-class {
+    padding 30px 72px 32px 32px
+    position relative
+    .reserve {
+      position absolute
+      width 64px
+      height 24px
+      bg-image('~@/assets/theme-default/images/common/reserve')
+      background-size 100% 100%
+      right 0
+      top 30px
+    }
+    .icons {
+      margin-top 5px
+      padding 0!important
+      display flex
+      margin-bottom 10px
+      .trial, .group {
+        display inline-block
+        padding 1px 6px
+        border-radius 8px
+        background rgba(243,243,243,1)
+        font-weight 500 
+        color rgba(153,153,153,1)  
+        transform scale(0.8)     
+      }
+    }
+    p {
+      margin 0
+      white-space nowrap
+    }
+    .profile {
+      margin-top 10px
+      display flex
+      align-items center
+      .username {
+        margin-left 10px
+      }
+    }
+  }
+}
+.lang-en {
+  .el-step__description {
+    font-size 16px
+  }
+}
+.lang-zh {
+  .el-step__description {
+    font-size 14px
+  }
+}
+.m-steps-wrap {
+  .lg-steps {
+    height 390px
+    .el-step__line {
+      left 19px
+      color #f4f4f4
+    }
+    .el-step__description{
+      padding-left 10px
+      line-height 40px
+    }
+    .el-step__icon {
+      width 40px
+      height 40px
+      font-size 20px
+      border none
+      background #f4f4f4
+      color #fff
+    }
+    .el-step__main {
+      padding-left 26px
+    }
+    .el-step__head.is-finish {
+      .el-step__line-inner {
+        border-color #56BECD
+      }
+    }
+    .el-step__description.is-finish {
+      color #56BECD
+    }
+    .el-step__description.is-process {
+      color #999
+      // background rgba(86, 190, 205, 0.2)
+      // border-radius 8px
+    }
+    .is-finish {
+      .el-step__icon {
+        background #56BECD
+      }
+    }
+    // .el-step__description {
+    //   .is-process, .is-finish {
+    //     color rgba(86, 190, 205, 1)
+    //   }
+    // }
+  }
+}
+/*登录注册*/
+.login-warpper {
+  width: 100%;
+  height: 100%;
+  background-image: url('~@/assets/theme-default/images/login/bg@2x.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom;
+  .login-form-warpper {
+    box-sizing: border-box;
+    max-width: 90%;
+    width: 420px;
+    height: 307px;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 2px 12px 2px rgba(0, 0, 0, 0.06);
+    border-radius: 16px;
+    padding: 10px 50px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .title {
+      font-weight: bold;
+      text-align: center;
+      line-height: 70px;
+      font-size: 18px;
+      color: #333;
+    }
+  }
+}
+.login-form {
+  .el-button {
+    width: 100%;
+  }
+  .passworld {
+    position: relative;
+    .showpass {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      width: 20px;
+      height: 20px;
+      background-image: url('~@/assets/theme-default/images/login/close@2x.png');
+      background-size: 20px 20px;
+      transform: translateY(-50%);
+
+      &.active {
+        background-image: url('~@/assets/theme-default/images/login/open@2x.png');
+      }
+    }
+  }
+}
+.topbar-warpper {
+  height 60px
+  line-height 60px
+  overflow hidden
+  padding 0 30px
+  .c-logo {
+    width 116px
+    height 40px
+    margin-top 10px
+    float left
+  }
+  a{
+    color #595e9b
+    font-size 14px
+    text-decoration none
+    float right
+  }
+}
+// 小班课轮播图
+.courseware-preview{
+  .el-dialog__title {
+    opacity: 0;
+    color:#fff;
+  }
+}
+.c-detail-wrap {
+  .el-carousel__indicators--horizontal {
+    display: flex;
+    justify-content: center;
+    width: 140px;
+    top: 180px;
+    left: 30px;
+    transform: translateX(0)
+    overflow: hidden;
+  }
+  .el-carousel__indicator.is-active button{
+    background: #56BECD;
+  }
+  .el-carousel__indicator button{
+    background: #d8d8d8;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+}
